@@ -114,7 +114,7 @@ def preprocess_dataframe(dataframe,df_type='other'):
 
 def import_country_data():
     # Extract
-    country_data = convert_dict_to_df("../MCB Technical Assessment/data_cache/countries_continents_codes_flags_url.json")
+    country_data = convert_dict_to_df("data_cache/countries_continents_codes_flags_url.json")
 
     ## Transform
     country_data = preprocess_dataframe(country_data,df_type='country')
@@ -125,14 +125,14 @@ def import_country_data():
 
 def import_happiness_reports():
     # Get all csv files
-    filelist = glob.glob("../MCB Technical Assessment/data_cache/hr_reports/*.csv")
+    filelist = glob.glob("data_cache/hr_reports/*.csv")
 
     for filename in filelist:
         csv_file = pd.read_csv(filename)
 
         csv_file = preprocess_dataframe(csv_file)
 
-        report_year = filename.replace('./MCB Technical Assessment/data_cache/hr_reports\\', "")
+        report_year = filename.replace('data_cache/hr_reports\\', "")
         report_year = report_year.replace(".csv", '')
         report_year = report_year.replace(".", '')
         elements = report_year.split('_')
