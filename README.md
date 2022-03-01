@@ -27,9 +27,9 @@ Note: The reason of using 2 tables is to use the sourcetable as a rollback table
 3. transfer_to_maintable - stored procedure is used to transfer raw data to final table >happiness_report_maintable<
 
 # how to run codefiles
-## 1. Question 1 -> Just run the sql scripts
-## 2. Question 2 -> on cmd, run question_2.py
-## 3. Question 3 -> on cmd, run question_3.py. User will be prompted for 3 inputs and in the end, the report(csv or parquet) will be downloaded to directory reports in root folder.
-## 4. Question 4 -> on cmd, run question_4.py. User will be prompted for 1 input and finally, json file will be donwloaded to reports directory.
+### 1. Question 1 -> Just run the sql scripts
+### 2. Question 2 -> on cmd, run question_2.py
+### 3. Question 3 -> on cmd, run question_3.py. User will be prompted for 3 inputs and in the end, the report(csv or parquet) will be downloaded to directory reports in root folder.
+### 4. Question 4 -> on cmd, run question_4.py. User will be prompted for 1 input and finally, json file will be donwloaded to reports directory.
 
 Unfortunately, due to lack of time on my end, i was unable to complete question 5 and 6.
