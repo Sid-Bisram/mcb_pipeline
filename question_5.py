@@ -5,13 +5,6 @@ import plotly.graph_objects as go
 import pandas as pd
 
 ### Data
-data = {'Country': ['Afghanistan', 'China', 'France'], 'latitude': ['33.7680065', '35.000074', '46.603354'],
-        'longitude': ['66.2385139', '104.999927', '1.8883335'],
-        'map_image': ['https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg',
-                      'https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
-                      'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg'],
-        'desc': ['Description 1', 'Description 2', 'Description 3'],
-        'year': ['2015', '2016', '2016']}
 
 data = db.get_Q5_dataset()
 df = pd.DataFrame(data,columns=['year','Country','map_image','latitude','longitude','happiness_score','happiness_status'])
