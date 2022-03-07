@@ -61,6 +61,18 @@ def get_company_list():
         else:
             return None
 
+def get_year_list():
+    with create_db_connection() as connection:
+        cursor = connection.cursor()
+        cursor.execute(
+                "Select distinct report_year from happiness_report_maintable order by report_year")
+        response = list(cursor.fetchall())
+
+        if(response is not None):
+            return [data[0] for data in response]
+        else:
+            return None
+
 def get_Q5_dataset():
     with create_db_connection() as connection:
         cursor = connection.cursor()

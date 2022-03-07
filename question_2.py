@@ -154,7 +154,7 @@ def update_coordinates_in_country_table():
     with db.create_db_connection() as connection:
         cursor = connection.cursor()
         cursor.execute(
-            "SELECT id,alpha_2 FROM db_hp.tbl_country_region country where latitude is null and (alpha_2 is not null and alpha_2 <> '')")
+            "SELECT id,alpha_2 FROM db_hp.tbl_country_region country where (alpha_2 is not null and alpha_2 <> '')")
 
         geo_info = cursor.fetchall()
         update_query='Update tbl_country_region set latitude=%s,longitude=%s where id=%s'
@@ -170,11 +170,12 @@ def update_coordinates_in_country_table():
             connection.commit()
 
 if __name__ == '__main__':
+
     import_country_data()
 
     import_happiness_reports()
 
-
+    update_coordinates_in_country_table()
 
 
 
