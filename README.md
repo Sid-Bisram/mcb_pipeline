@@ -8,7 +8,7 @@ The purpose of this repository is a requirement for MCB technical assessement.
 
 Database (Mariadb)
 1) The dataconfig.config file should be filled in with the proper details such as host, username, password and db_name
-2) Once all the scripts, the database hould contain the following:
+2) Once all the scripts, the database should contain the following:
 
 ### tables
 tbl_country_region - containing all the country related information
@@ -31,5 +31,7 @@ Note: The reason of using 2 tables is to use the sourcetable as a rollback table
 ### 2. Question 2 -> on cmd, run question_2.py
 ### 3. Question 3 -> on cmd, run question_3.py. User will be prompted for 3 inputs and in the end, the report(csv or parquet) will be downloaded to directory reports in root folder.
 ### 4. Question 4 -> on cmd, run question_4.py. User will be prompted for 1 input and finally, json file will be donwloaded to reports directory.
+### 5. Question 5 -> on cmd, run question_5.py. User will receive a localhost to click whereby they can view the map visualisation.
+### 6. Question 6 -> on cmd, run question_6.py. The country records will be updated with their capital, longitude and latitude.
 
 Unfortunately, due to lack of time on my end, i was unable to complete question 5 and 6.
