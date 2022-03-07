@@ -55,6 +55,7 @@ CREATE TABLE `tbl_country_region` (
   `intermediate_region_code` double DEFAULT NULL,
   `latitude` double DEFAULT NULL,
   `longitude` double DEFAULT NULL,
+  `capital_city` text DEFAULT NULL,
   `date_created` datetime DEFAULT current_timestamp(),
   `date_modified` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
