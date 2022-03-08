@@ -1,3 +1,5 @@
+CREATE DATABASE db_hp;
+
 CREATE TABLE `happiness_report_maintable` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) DEFAULT NULL,
